@@ -34,6 +34,14 @@
                 margin:0;
                 padding: 0;
             }
+            footer {
+                text-align: center;
+                color: white;
+                background-color: black;
+            }
+            h3 {
+                text-decoration: underline;
+            }
         </style>
         
     </head>
@@ -55,5 +63,17 @@
         </header>
         <img src="images/logo.png" alt="logo" class="center">
         <h1 style = >Located in West Jordan</h1>
+        <footer>
+            <h3>♫ How to contact me: ♫</h3>
+            <p>Text/Call: 801-910-4839</p>
+            <p>Email: sjrobinson6@gmail.com</p>
+            <button onclick="sendEmail()">Contact me</button>
+            <script>
+                function sendEmail(){
+                    window.location.href = "mailto:sjrobinson6@gmail.com";
+                }
+            </script>
+
+        </footer>
     </body>
 </html>
