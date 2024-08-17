@@ -15,17 +15,22 @@
             width: 50%;
         }
 
+        /* Basic Styles */
         .nav-menu {
             display: flex;
+            /* Horizontal list on desktop */
             list-style-type: none;
+            /* Remove bullet points */
             padding: 0;
             margin: 0;
             background-color: black;
+            justify-content: center;
+            /* Center the navigation items */
         }
 
         .nav-menu li {
-            margin: 0;
-            padding: 40px;
+            margin: 0 10px;
+            /* Adjust margin between items */
             color: white;
         }
 
@@ -36,13 +41,51 @@
             text-decoration: none;
         }
 
+        .nav-menu a:hover {
+            background-color: #555;
+        }
+
+        /* Hamburger Button */
+        .nav-toggle {
+            display: none;
+            /* Hide the hamburger button on desktop */
+            background: none;
+            border: none;
+            color: white;
+            padding: 10px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        /* Mobile Styles */
         @media (max-width: 767px) {
             .nav-menu {
+                display: none;
+                /* Hide the menu by default on mobile */
                 flex-direction: column;
+                /* Stack items vertically */
+                width: 100%;
+                /* Take full width */
                 align-items: center;
-                padding: 0;
+            }
+
+            .nav-toggle {
+                display: block;
+                /* Show the hamburger button on mobile */
+            }
+
+            .nav-menu.show {
+                display: flex;
+                /* Show the menu when toggled */
+            }
+
+            .nav-menu li {
+                margin: 10px 0;
+                /* Add space between vertical items */
             }
         }
+
 
 
         a {
@@ -80,6 +123,7 @@
 <body style="background-color: white;">
     <header>
         <nav>
+            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
             <ul class="nav-menu">
                 <li>♫</li>
                 <li><a href="index.html">Home</a></li>
@@ -104,6 +148,9 @@
             function sendEmail() {
                 window.location.href = "mailto:sjrobinson6@gmail.com";
             }
+            document.querySelector('.nav-toggle').addEventListener('click', function () {
+                document.querySelector('.nav-menu').classList.toggle('show');
+            });
         </script>
 
     </footer>
