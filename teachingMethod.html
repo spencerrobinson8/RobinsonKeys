@@ -47,16 +47,25 @@
             height: 93px;
             float: left;
         }
-        .images{
+
+        .images {
             display: flex;
             flex-direction: column;
         }
+
         .container {
             display: flex;
             align-items: flex-start;
         }
+
         .text {
             margin-left: 15px;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            background-color: black;
         }
     </style>
 
@@ -95,6 +104,18 @@
             </p>
         </div>
     </div>
+    <footer>
+        <h3>♫ How to contact me: ♫</h3>
+        <p>Text/Call: 801-910-4839</p>
+        <p>Email: sjrobinson6@gmail.com</p>
+        <button onclick="sendEmail()">Contact me</button>
+        <script>
+            function sendEmail() {
+                window.location.href = "mailto:sjrobinson6@gmail.com";
+            }
+        </script>
+
+    </footer>
 </body>
 
 </html>

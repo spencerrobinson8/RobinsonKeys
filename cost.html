@@ -56,6 +56,12 @@
         .text {
             margin-left: 15px;
         }
+
+        footer {
+            text-align: center;
+            color: white;
+            background-color: black;
+        }
     </style>
 
 </head>
@@ -90,6 +96,18 @@
             </p>
         </div>
     </div>
+    <footer>
+        <h3>♫ How to contact me: ♫</h3>
+        <p>Text/Call: 801-910-4839</p>
+        <p>Email: sjrobinson6@gmail.com</p>
+        <button onclick="sendEmail()">Contact me</button>
+        <script>
+            function sendEmail() {
+                window.location.href = "mailto:sjrobinson6@gmail.com";
+            }
+        </script>
+
+    </footer>
 </body>
 
 </html>

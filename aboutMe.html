@@ -1,78 +1,107 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            h3 {
-                text-decoration: underline;
-            }
-            .center {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 50%;
-            }
-            table {
-                padding-bottom: 30px;
-                padding-top: 30px;
-            }
-            th {
-                color: white;
-                padding-left: 50px;
-                padding-right: 50px;
-            }
-            a{
-                color:white;
-                text-decoration: none;
-                
-            }
-            header {
-                margin:0;
-                padding: 0;
-                background-color: black;
-            }
-            body {
-                margin:0;
-                padding: 0;
-            }
-            img {
-                float: right;
-                width: 125px;
-                height: 191px;
-            }
-            div {
-                float: left;
-            }
-        </style>
-        
-    </head>
-    <body style ="background-color: white;">
-        <header>
-            <table>
-                <tr>
-                    <th>♫</th>
-                    <th><a href="index.html">Home</a></th>
-                    <th>♫</th>
-                    <th><a href="aboutMe.html">About Me</a></th>
-                    <th>♫</th>
-                    <th><a href="teachingMethod.html">Teaching Method</a></th>
-                    <th>♫</th>
-                    <th><a href="cost.html">Cost</a></th>
-                    <th>♫</th>
-                </tr>
-            </table>
-        </header>
-        
-        
-        <div>
-            <img src="images/shauna.jpg" alt="self portrait">
-            <h3>♫ A Little bit about me: ♫</h3>
+
+<head>
+    <style>
+        h3 {
+            text-decoration: underline;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        table {
+            padding-bottom: 30px;
+            padding-top: 30px;
+        }
+
+        th {
+            color: white;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+
+        }
+
+        header {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            float: right;
+            width: 125px;
+            height: 191px;
+        }
+
+        div {
+            float: left;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            background-color: black;
+        }
+    </style>
+
+</head>
+
+<body style="background-color: white;">
+    <header>
+        <table>
+            <tr>
+                <th>♫</th>
+                <th><a href="index.html">Home</a></th>
+                <th>♫</th>
+                <th><a href="aboutMe.html">About Me</a></th>
+                <th>♫</th>
+                <th><a href="teachingMethod.html">Teaching Method</a></th>
+                <th>♫</th>
+                <th><a href="cost.html">Cost</a></th>
+                <th>♫</th>
+            </tr>
+        </table>
+    </header>
+
+
+    <div>
+        <img src="images/shauna.jpg" alt="self portrait">
+        <h3>♫ A Little bit about me: ♫</h3>
         <p>
-            Hi my name is Shauna Robinson. I taught piano for 11 years before quitting to raise my 
-            wonderful children. I’m excited to start teaching again. Throughout my life I have had 
+            Hi my name is Shauna Robinson. I taught piano for 11 years before quitting to raise my
+            wonderful children. I’m excited to start teaching again. Throughout my life I have had
             opportunities to do several different professions, in doing so, I have found that I enjoy
-             teaching the most. A few things I also enjoy are scrapbooking, playing games, reading,
-              but most of all spending time with my family!
+            teaching the most. A few things I also enjoy are scrapbooking, playing games, reading,
+            but most of all spending time with my family!
         </p>
-        </div>
-    </body>
+    </div>
+    <footer>
+        <h3>♫ How to contact me: ♫</h3>
+        <p>Text/Call: 801-910-4839</p>
+        <p>Email: sjrobinson6@gmail.com</p>
+        <button onclick="sendEmail()">Contact me</button>
+        <script>
+            function sendEmail() {
+                window.location.href = "mailto:sjrobinson6@gmail.com";
+            }
+        </script>
+
+    </footer>
+</body>
+
 </html>
