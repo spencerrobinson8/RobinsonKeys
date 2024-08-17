@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -15,16 +14,68 @@
             width: 50%;
         }
 
-        table {
-            padding-bottom: 30px;
-            padding-top: 30px;
-            width: 100%;
+        .nav-menu {
+            display: flex;
+            /* Horizontal list on desktop */
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            background-color: black;
+            justify-content: center;
         }
 
-        th {
+        .nav-menu li {
+            margin: 0 10px;
             color: white;
-            padding-left: 50px;
-            padding-right: 50px;
+        }
+
+        .nav-menu a {
+            display: block;
+            padding: 10px 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-menu a:hover {
+            background-color: #555;
+        }
+
+        /* Hamburger Button */
+        .nav-toggle {
+            display: none;
+            /* Hide the hamburger button on desktop */
+            background: none;
+            border: none;
+            color: white;
+            padding: 10px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 767px) {
+            .nav-menu {
+                display: none;
+                /* Hide the menu by default on mobile */
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+            }
+
+            .nav-toggle {
+                display: block;
+                /* Show the hamburger button on mobile */
+            }
+
+            .nav-menu.show {
+                display: flex;
+                /* Show the menu when toggled */
+            }
+
+            .nav-menu li {
+                margin: 10px 0;
+            }
         }
 
         a {
@@ -76,19 +127,20 @@
 
 <body style="background-color: white;">
     <header>
-        <table>
-            <tr>
-                <th>♫</th>
-                <th><a href="index.html">Home</a></th>
-                <th>♫</th>
-                <th><a href="aboutMe.html">About Me</a></th>
-                <th>♫</th>
-                <th><a href="teachingMethod.html">Teaching Method</a></th>
-                <th>♫</th>
-                <th><a href="cost.html">Cost</a></th>
-                <th>♫</th>
-            </tr>
-        </table>
+        <nav>
+            <button class="nav-toggle" aria-label="Toggle navigation">☰Menu</button>
+            <ul class="nav-menu">
+                <li>♫</li>
+                <li><a href="index.html">Home</a></li>
+                <li>♫</li>
+                <li><a href="aboutMe.html">About Me</a></li>
+                <li>♫</li>
+                <li><a href="teachingMethod.html">Teaching Method</a></li>
+                <li>♫</li>
+                <li><a href="cost.html">Cost</a></li>
+                <li>♫</li>
+            </ul>
+        </nav>
     </header>
     <div class="container">
         <div class="images">
@@ -113,6 +165,9 @@
             function sendEmail() {
                 window.location.href = "mailto:sjrobinson6@gmail.com";
             }
+            document.querySelector('.nav-toggle').addEventListener('click', function () {
+                document.querySelector('.nav-menu').classList.toggle('show');
+            });
         </script>
 
     </footer>
