@@ -94,11 +94,6 @@
             background-color: black;
         }
 
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
         img {
             width: 134px;
             height: 125px;
@@ -114,13 +109,29 @@
             margin-left: 15px;
         }
 
-        footer {
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        .footer {
             text-align: center;
             color: white;
             background-color: black;
-            position: absolute;
-            bottom: 0;
+            padding: 10px 0;
             width: 100%;
+            position: relative;
         }
 
         .small {
@@ -165,7 +176,7 @@
             </p>
         </div>
     </div>
-    <footer>
+    <div class="footer">
         <h3>♫ How to contact me: ♫</h3>
         <p class="small">Text/Call: 801-910-4839</p>
         <p class="small">Email: sjrobinson6@gmail.com</p>
@@ -179,7 +190,7 @@
             });
         </script>
 
-    </footer>
+    </div>
 </body>
 
 </html>
